@@ -21,7 +21,7 @@ if "sports" not in st.session_state:
         "Mitko": 0
     }
 
-st.subheader("Избери любими неща")
+st.subheader("Избери ученик и оценка")
 
 grades = st.selectbox("Оценка:", list(st.session_state.grades.keys()))
 students = st.selectbox("Ученик:", list(st.session_state.students.keys()))
@@ -29,7 +29,7 @@ students = st.selectbox("Ученик:", list(st.session_state.students.keys()))
 if st.button("Запази избора"):
     st.session_state.grades[grades] += 1
     st.session_state.students[students] += 1
-    st.success("Изборът е записан!")
+    st.success("Оценката")
 
 st.divider()
 
