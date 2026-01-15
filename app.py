@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title("Любими неща - класна анкета")
+st.title("Оценки")
 
 # Инициализация на данните
 if "colors" not in st.session_state:
@@ -36,14 +36,14 @@ st.divider()
 st.subheader("Резултати")
 
 
-st.write("Любими цветове")
+st.write("Оценки")
 grades_df = pd.DataFrame.from_dict(
     st.session_state.grades, orient="index", columns=["Брой"]
 )
 st.bar_chart(grades_df)
 
 
-st.write("Любими спортове")
+st.write("Ученици")
 students_df = pd.DataFrame.from_dict(
     st.session_state.students, orient="index", columns=["Брой"]
 )
