@@ -23,8 +23,8 @@ if "sports" not in st.session_state:
 
 st.subheader("Избери любими неща")
 
-grades = st.selectbox("Оценка:", list(st.session_state.colors.keys()))
-students = st.selectbox("Ученик:", list(st.session_state.sports.keys()))
+grades = st.selectbox("Оценка:", list(st.session_state.grades.keys()))
+students = st.selectbox("Ученик:", list(st.session_state.students.keys()))
 
 if st.button("Запази избора"):
     st.session_state.grades[grades] += 1
